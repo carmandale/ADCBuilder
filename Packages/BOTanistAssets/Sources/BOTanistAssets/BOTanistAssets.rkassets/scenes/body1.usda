@@ -442,6 +442,7 @@ def Xform "Root"
                     rel material:binding = </Root/MI_rainbow_B1> (
                         bindMaterialAs = "weakerThanDescendants"
                     )
+                    uniform token subdivisionScheme = "none"
                 }
 
                 over "pelvis_panel" (
@@ -451,6 +452,7 @@ def Xform "Root"
                     rel material:binding = </Root/MI_rainbow_B1> (
                         bindMaterialAs = "weakerThanDescendants"
                     )
+                    uniform token subdivisionScheme = "none"
                 }
 
                 over "torso_panel" (
@@ -460,10 +462,13 @@ def Xform "Root"
                     rel material:binding = </Root/MI_rainbow_B1> (
                         bindMaterialAs = "weakerThanDescendants"
                     )
+                    uniform token subdivisionScheme = "none"
                 }
 
                 over "hand_panel"
                 {
+                    uniform token subdivisionScheme = "none"
+
                     over "mat_B1" (
                         prepend apiSchemas = ["MaterialBindingAPI"]
                     )
@@ -476,6 +481,8 @@ def Xform "Root"
 
                 over "shoulder_panel"
                 {
+                    uniform token subdivisionScheme = "none"
+
                     over "mat_B1" (
                         prepend apiSchemas = ["MaterialBindingAPI"]
                     )
@@ -488,6 +495,8 @@ def Xform "Root"
 
                 over "hip_panel"
                 {
+                    uniform token subdivisionScheme = "none"
+
                     over "mat_B1" (
                         prepend apiSchemas = ["MaterialBindingAPI"]
                     )
@@ -500,6 +509,8 @@ def Xform "Root"
 
                 over "toe_panel"
                 {
+                    uniform token subdivisionScheme = "none"
+
                     over "mat_B1" (
                         prepend apiSchemas = ["MaterialBindingAPI"]
                     )
@@ -512,6 +523,8 @@ def Xform "Root"
 
                 over "calf_panel"
                 {
+                    uniform token subdivisionScheme = "none"
+
                     over "mat_B1" (
                         prepend apiSchemas = ["MaterialBindingAPI"]
                     )

@@ -89,8 +89,10 @@ class RobotCharacter {
         
         // The backpack and head models are located at the pin location. To rotate them in place, which is how joints operate,
         // joint pinning system translates by the offset, rotates, and then translates back to original position.
-        guard var headOffset = headOffset ?? skeleton.pins["head"]?.position,
-              var backpackOffset = backpackOffset ?? skeleton.pins["backpack"]?.position else {
+        let headPin = skeleton.pins.set(named: "headPin", skeletalJointName: "head")
+        let backpackPin = skeleton.pins.set(named: "backbackPin", skeletalJointName: "backpack")
+        guard var headOffset = headOffset ?? headPin.position,
+              var backpackOffset = backpackOffset ?? backpackPin.position else {
             fatalError("Didn't find expected joint for head or backpack.")
         }
         headOffset *= -1
@@ -122,7 +124,7 @@ class RobotCharacter {
     
     /// Plays the robot animation for the given animation state.
     func playAnimation(_ animState: AnimationState) {
-        guard let anim = body.animationLibraryComponent?[animState.rawValue] else {
+        guard let anim = body.animationLibraryComponent?.animations[animState.rawValue] else {
             fatalError("Didn't find requested animation in library.")
         }
         if let rigGroup = body.findEntity(named: "rig_grp") {

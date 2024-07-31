@@ -108,6 +108,61 @@ def Xform "Root"
                     rel material:binding = </Root/MI_plastic_B2> (
                         bindMaterialAs = "strongerThanDescendants"
                     )
+
+                    over "L_arm_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "R_arm_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "R_leg_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "R_hip_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "pelvis_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "L_shoulder_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "R_shoulder_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "torso_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "L_hip_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "base"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
+
+                    over "L_leg_panel"
+                    {
+                        uniform token subdivisionScheme = "none"
+                    }
                 }
             }
         }

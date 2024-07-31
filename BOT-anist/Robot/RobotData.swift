@@ -6,7 +6,7 @@ Holds the data that makes up a single robot.
 */
 
 import Foundation
-@preconcurrency import RealityKit
+import RealityKit
 import SwiftUI
 import BOTanistAssets
 

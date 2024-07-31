@@ -402,6 +402,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_plastic_B3> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "L_shoulder_panel" (
@@ -411,6 +412,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_plastic_B3> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "R_arm_panel" (
@@ -420,6 +422,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_plastic_B3> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "L_arm_panel" (
@@ -429,6 +432,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_plastic_B3> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "torso_panel" (
@@ -438,6 +442,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_plastic_B3> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "base" (
@@ -447,6 +452,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_plastic_B3> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
                 }
 
@@ -459,6 +465,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_lights> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "connector" (
@@ -468,6 +475,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_lights> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "hands" (
@@ -478,6 +486,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_lights> (
                             bindMaterialAs = "strongerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
 
                     over "connectorBottom" (
@@ -488,6 +497,7 @@ def Xform "Root"
                         rel material:binding = </Root/MI_lights> (
                             bindMaterialAs = "weakerThanDescendants"
                         )
+                        uniform token subdivisionScheme = "none"
                     }
                 }
 
@@ -499,6 +509,7 @@ def Xform "Root"
                     rel material:binding = </Root/M_turbo> (
                         bindMaterialAs = "weakerThanDescendants"
                     )
+                    uniform token subdivisionScheme = "none"
                 }
             }
         }

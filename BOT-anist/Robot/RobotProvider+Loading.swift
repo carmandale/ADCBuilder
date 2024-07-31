@@ -71,7 +71,7 @@ extension RobotProvider {
                                                                           in: BOTanistAssetsBundle) {
                                         if let animationEntity = await rootEntity.findEntity(named: "rig_grp") {
                                             if let animation = await animationEntity.availableAnimations.first {
-                                                libComponent[animationType.rawValue] = animation
+                                                libComponent.animations[animationType.rawValue] = animation
                                             }
                                         }
                                     }
@@ -94,7 +94,7 @@ extension RobotProvider {
     func loadRobotMaterials(taskGroup: inout TaskGroup<RobotMaterialResult>) async {
         let materials = RobotMaterial.allCases
         for material in materials {
-            taskGroup.addTask { @MainActor in
+            taskGroup.addTask {
                 do {
                     let theMaterials = try await self.loadMaterialsFromRCPro(material: material)
                     return RobotMaterialResult(material: material, materials: theMaterials)

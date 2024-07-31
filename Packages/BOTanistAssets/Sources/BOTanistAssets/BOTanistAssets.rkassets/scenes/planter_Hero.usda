@@ -272,6 +272,14 @@ def Xform "Root"
         float3 xformOp:scale = (0.014, 0.014, 0.014)
         float3 xformOp:translate = (0, -0.02943489, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "poppy"
+            {
+                uniform token subdivisionScheme = "none"
+            }
+        }
     }
 
     def "yucca" (
@@ -285,6 +293,14 @@ def Xform "Root"
         float3 xformOp:scale = (0.013, 0.013, 0.013)
         float3 xformOp:translate = (0, -0.03061296, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "yucca"
+            {
+                uniform token subdivisionScheme = "none"
+            }
+        }
     }
 
     def "coffeeBerry" (
@@ -297,6 +313,14 @@ def Xform "Root"
         )
         float3 xformOp:scale = (0.013, 0.013, 0.013)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geo_grp"
+        {
+            over "coffeeBerry"
+            {
+                uniform token subdivisionScheme = "none"
+            }
+        }
     }
 
     def "MI_coffeeBerry" (
