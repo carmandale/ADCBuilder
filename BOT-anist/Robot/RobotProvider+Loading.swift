@@ -6,7 +6,7 @@ Loads and provides access to robot parts and materials.
 */
 
 import Foundation
-import RealityKit
+@preconcurrency import RealityKit
 import BOTanistAssets
 
 extension RobotProvider {
@@ -70,8 +70,8 @@ extension RobotProvider {
                                     if let rootEntity = try? await Entity(named: "\(animationDirectory)\(partName)\(animationType.fileSuffix())",
                                                                           in: BOTanistAssetsBundle) {
                                         if let animationEntity = await rootEntity.findEntity(named: "rig_grp") {
-                                            if let animation = await animationEntity.availableAnimations.first {
-                                                libComponent.animations[animationType.rawValue] = animation
+                                            if let animationLibraryComponent = await animationEntity.animationLibraryComponent {
+                                                libComponent.animations[animationType.rawValue] = animationLibraryComponent.defaultAnimation
                                             }
                                         }
                                     }

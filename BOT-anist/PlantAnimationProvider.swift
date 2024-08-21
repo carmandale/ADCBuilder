@@ -48,7 +48,9 @@ class PlantAnimationProvider: Sendable {
         do {
             let rootEntity = try await Entity(named: sceneName, in: BOTanistAssetsBundle)
             rootEntity.forEachDescendant(withComponent: BlendShapeWeightsComponent.self) { entity, component in
-                ret = entity.availableAnimations[0]
+                if let index = entity.animationLibraryComponent?.animations.startIndex {
+                    ret = entity.animationLibraryComponent?.animations[index].value
+                }
             }
             guard let ret else { fatalError("Animation resource unexpectedly nil.") }
             return ret
@@ -64,7 +66,7 @@ class PlantAnimationProvider: Sendable {
         do {
             let rootEntity = try await Entity(named: sceneName, in: BOTanistAssetsBundle)
              rootEntity.forEachDescendant(withComponent: BlendShapeWeightsComponent.self) { entity, component in
-                ret = entity.availableAnimations[0]
+                 ret = entity.animationLibraryComponent?.defaultAnimation
              }
             guard let ret else { fatalError("Animation resource unexpectedly nil.") }
             return ret
